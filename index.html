@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script type="text/javascript" src="logic.js"></script>
+    <title>PokeDesk!</title>
+</head>
+<body>
+    <div class="header">
+        <h1>PokeDesk</h1>
+        <p>Welcome to PokeDesk!</p>
+
+        <img src="https://raw.githubusercontent.com/PokeAPI/media/master/logo/pokeapi_256.png" alt="PokeAPI Logo">
+        <p >Powered by <a class="powered_by_link" href="https://pokeapi.co/" target="_blank">PokeAPI</a></p>
+    </div>
+    <div class="search-section">
+        <h2>Search for a Pokemon</h2>
+        <input type="text" id="pokemonInput" placeholder="Enter a Pokemon name or ID">
+        <button type="button" id="searchButton" class="glow-on-hover" onclick="getPokemonDetails(document.getElementById('pokemonInput').value)">Search</button>
+    </div>
+    <div class="details-section">
+        <h2>Pokemon Details</h2>
+        <div id="pokemonDetails">
+            <div class="pokemon-images">
+                <div class="pokemon-image-carsoule">
+                </div>
+                <div class="image-caresoul-controller">
+                    <button class="prev-button" onclick="prevImage()">&#10094;</button>
+                    <button class="next-button" onclick="nextImage()">&#10095;</button>
+                </div>
+            </div>
+            <div class="pokemon-info-basic">
+                <div class="pokemon-name"></div>
+                <div class="pokemon-id"></div>
+                <div class="pokemon-types"></div>
+            </div>
+            <div class="pokemon-more-info">
+                <div class="pokemon-height"></div>
+                <div class="pokemon-weight"></div>
+                <div class="pokemon-abilities"></div>
+                <div class="pokemon-moves"></div>
+            </div>
+            <button class="pokemon-more-info-button" onclick="getMoreInfo()">
+                More Info
+            </button>
+        </div>
+    </div>
+</body>
+</html>
